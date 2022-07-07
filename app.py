@@ -12,7 +12,8 @@ def chatbot():
     req=request.get_json(force=True)
     print(req)
     print("----------")
-    #return jsonify(fulfillmentText="챗봇 접속 성공")
+    return jsonify(fulfillmentText="챗봇 접속 성공")
+    """
     return jsonify(fulfillment_messages=[
         {
             "payload":{
@@ -33,7 +34,7 @@ def chatbot():
             }
         }
     ])
-
+"""
 
 if __name__=='__main__':
     app.run("0.0.0.0",port=5001,debug=True)
